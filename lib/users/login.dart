@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:orchid/ui/app_container.dart';
 import 'package:orchid/ui/app_screen_container.dart';
 import '../models/user.dart';
-import 'create.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../users/providers.dart';
 import '../app.dart';
@@ -84,17 +83,6 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                   Padding(
                     padding: const EdgeInsets.all(16),
                     child: FilledButton(onPressed: login, child: Text('Login')),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => CreateUserPage(),
-                        ),
-                      );
-                    },
-                    child: Text('Create User'),
                   ),
                 ],
               ),

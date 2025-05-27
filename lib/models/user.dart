@@ -36,6 +36,7 @@ class User {
         return User(id: id);
       }
     }
-    return null;
+    await UsersStorage.addUser(id);
+    return User(id: id);
   }
 }
